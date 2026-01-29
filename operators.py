@@ -53,7 +53,7 @@ else:
 
 num1 = int(input("Enter a number: "))
 num2 = int(input("Enter a number: "))
-operator = input("Enter an operator (+, -, *, /, %): ")
+operator = input("Enter an operator (+, -, *, /, %,  ): ")
 
 if operator == "+":
     print("Result: ", num1 + num2)
@@ -61,12 +61,17 @@ elif operator == "-":
     print("Result: ", num1 - num2)
 elif operator == "*":
     print("Result: ", num1 * num2)
-elif operator == "%":
-    print("Result: ", num1 %num2)
+elif operator == "/":
+    if num2 == 0:
+        print("Error: Cannot divide by zero.")
+    else:
+        print("Result: ", num1 / num2)
+else:
+    print("Invalid operator.")
+    
+    
 
-
-
-
-
-
-
+# Try extending this calculator with these extra features:
+# Division check → If the user tries to divide by zero, print "Error: Cannot divide by zero."
+# Power operator → Add support for ^ (exponentiation). Example: 2 ^ 3 = 8.
+# Multiple operations → Let the user keep calculating until they type "exit".

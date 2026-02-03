@@ -24,15 +24,8 @@
 #         print("Odd number")
 #         return n
     
-# print(do_not_panic(3))
+# print(do_not_panic(3)
 
-def reverse_words(sentence):
-    sentence_list = sentence.lower().strip(" ")
-
-    for char in sentence_list:
-        return reversed(char)
-        
-print(reverse_words("Hello world"))
 
 
 

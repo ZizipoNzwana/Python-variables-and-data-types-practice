@@ -32,7 +32,7 @@ pass
 #     if vowel in vowels:
 #         count += 1
 # print(count)
-    
+pass 
 # Challenge 5: Reverse a Word
 # Ask the user to enter a word. Use a for loop to print the word backwards.
 # Example: "hello" → "olleh"
@@ -43,12 +43,71 @@ pass
 #     word = sentence[::-1].lower()
 # print(word)
 
-
+pass
 # WHILE LOOPS....
 # Challenge 1: Countdown
 # Write a program that starts at 10 and counts down to 1 using a while loop. After reaching 1, print "Blast off!".
-# count_down = 10
 
-# while count_down < 10:
-#     count_down -= 1
-# print(count_down)
+# count = 10
+# while count >= 1:
+#     print(count)
+#     count = count -1
+# print("Blast off!")
+pass
+
+# password = ""
+# while password.lower() != "python123":
+#     password = input("Enter password: ")
+# print("Acess granted!")
+
+pass
+# Challenge 2: Guess the Number
+# Pick a secret number (e.g., 7).
+# Ask the user to guess the number.
+
+# secret_number = 5
+
+# while secret_number >= 1:
+#     guess_number = int(input("Enter your guessing number: "))
+#     if secret_number != guess_number:
+#         print("Try again!")
+#     else:
+#         print("You got it!")
+#         break
+
+pass
+# # Challenge 3: Sum Until Zero
+# # Ask the user to enter numbers.
+# # Keep adding them together until the user enters 0.
+# # Then print the total sum.
+
+# number = input("Enter your number: ").split()
+
+# print(type(number))
+# num = 0
+# total = 0
+# while num < len(number):
+#     total += int(number[num])
+#     num = num + 1
+# print(total)
+    
+    
+# numbers = [ 1, 2, 6, 4]
+# total = 0
+# for num in range(0, len(numbers)):
+#     total += numbers[num]
+# print(total)
+    
+
+def count_word_occurrences(list_of_words):
+    result : dict = {}
+    # result.get()
+    
+    for word in list_of_words:
+        if result.get(word, None):
+            result[word] += 1
+        else:
+            result[word] = 1
+    return result
+
+print(count_word_occurrences(["apple", "banana", "apple", "orange"]))

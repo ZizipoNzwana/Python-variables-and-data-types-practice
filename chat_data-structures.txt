@@ -1,0 +1,142 @@
+Nice, this is a solid way to learn 👍
+Below are pytest-only test questions for a beginner Python developer.
+There is NO implementation code, only tests that will initially fail until the learner writes the functions.
+
+Each section includes:
+
+What the learner should implement (described in docstrings/comments)
+
+Pytest tests that define the expected behavior
+
+1️⃣ Data Structures
+Task: List Operations
+
+Goal:
+Create a function get_unique_sorted_numbers(numbers) that:
+
+Accepts a list of integers
+
+Removes duplicates
+
+Returns a sorted list in ascending order
+
+# test_data_structures.py
+import pytest
+
+def test_removes_duplicates():
+    result = get_unique_sorted_numbers([3, 1, 2, 3, 2])
+    assert result == [1, 2, 3]
+
+def test_handles_empty_list():
+    result = get_unique_sorted_numbers([])
+    assert result == []
+
+def test_handles_negative_numbers():
+    result = get_unique_sorted_numbers([-1, -3, -2, -1])
+    assert result == [-3, -2, -1]
+
+2️⃣ Data Manipulation
+Task: Dictionary Aggregation
+
+Goal:
+Create a function count_word_occurrences(words) that:
+
+Accepts a list of strings
+
+Returns a dictionary where keys are words and values are occurrence counts
+
+# test_data_manipulation.py
+import pytest
+
+def test_counts_words_correctly():
+    words = ["apple", "banana", "apple", "orange"]
+    result = count_word_occurrences(words)
+    assert result == {
+        "apple": 2,
+        "banana": 1,
+        "orange": 1
+    }
+
+def test_empty_input():
+    result = count_word_occurrences([])
+    assert result == {}
+
+def test_case_sensitive():
+    words = ["Apple", "apple"]
+    result = count_word_occurrences(words)
+    assert result == {
+        "Apple": 1,
+        "apple": 1
+    }
+
+3️⃣ Recursion
+Task: Recursive Factorial
+
+Goal:
+Create a function factorial(n) that:
+
+Uses recursion
+
+Returns the factorial of a non-negative integer
+
+factorial(0) should return 1
+
+# test_recursion.py
+import pytest
+
+def test_factorial_of_zero():
+    assert factorial(0) == 1
+
+def test_factorial_of_one():
+    assert factorial(1) == 1
+
+def test_factorial_of_five():
+    assert factorial(5) == 120
+
+def test_factorial_of_three():
+    assert factorial(3) == 6
+
+4️⃣ String Formatting
+Task: User Greeting
+
+Goal:
+Create a function format_greeting(name, age) that:
+
+Returns a formatted string
+
+Example: "Hello Alice, you are 25 years old."
+
+# test_string_formatting.py
+import pytest
+
+def test_basic_greeting():
+    result = format_greeting("Alice", 25)
+    assert result == "Hello Alice, you are 25 years old."
+
+def test_different_name_and_age():
+    result = format_greeting("Bob", 40)
+    assert result == "Hello Bob, you are 40 years old."
+
+def test_age_zero():
+    result = format_greeting("Baby", 0)
+    assert result == "Hello Baby, you are 0 years old."
+
+🧪 How the learner uses this
+
+Run pytest → tests fail ❌
+
+Implement the required functions
+
+Re-run pytest → tests pass ✅
+
+If you want, I can:
+
+Combine all tests into one beginner test suite
+
+Add edge-case tests
+
+Convert these into interview-style questions
+
+Add pytest parameterized tests (great for learning)
+
+Just say the word 🚀

@@ -63,11 +63,11 @@ pass
 # Create a list with numbers and text mixed together.
 # Loop through it and print whether each item is a number or text.
 
-items = [1, "apple", "sophie", 2]
+# items = [1, "apple", "sophie", 2]
 
-for item in items:
-    if isinstance(item, int):
-        print("This is an int item: ", item)
-    else:
-        isinstance(item, str)
-        print(item)
+# for item in items:
+#     if isinstance(item, int):
+#         print("This is an int item: ", item)
+#     else:
+#         isinstance(item, str)
+#         print(item)

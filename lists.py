@@ -65,7 +65,9 @@ pass
 
 items = [1, "apple", "sophie", 2]
 
-for i in items:
-    print(i)
-    if i >= int:
-        print(i)
+for item in items:
+    if isinstance(item, int):
+        print("This is an int item: ", item)
+    else:
+        isinstance(item, str)
+        print(item)
